@@ -35,7 +35,9 @@ import { CoursesService } from './courses.service';
             {{course.releaseDate| date:'dd-MM-yyyy'}}
         </div>    
         
-        {{ text | summary: 10}}
+        {{ text | summary: 10}}  
+        
+        <span  class = "glyphicon" [class.glyphicon-star] = "isFavorite" [class.glyphicon-star-empty] = "!isFavorite" (click)= starOnClicked()></span>
         ` 
 })
 export class CoursesComponent {
@@ -49,6 +51,7 @@ export class CoursesComponent {
 
     text = `Lorem Ipsum is simply dummy sentences Lorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentencesLorem Ipsum is simply dummy sentences
     `
+    isFavorite = false;
 
     course = {
         title: "The complete Angular Course",
@@ -86,6 +89,12 @@ export class CoursesComponent {
     onEnter(email) {
         console.log("Enter was pressed");
         console.log(this.email);
+
+    }
+
+    starOnClicked(){
+
+        this.isFavorite = !this.isFavorite;
 
     }
 }
