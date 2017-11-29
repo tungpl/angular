@@ -38,6 +38,9 @@ import { CoursesService } from './courses.service';
         {{ text | summary: 10}}  
         
         <span  class = "glyphicon" [class.glyphicon-star] = "isFavorite" [class.glyphicon-star-empty] = "!isFavorite" (click)= starOnClicked()></span>
+        
+        <input type="text" [(ngModel)] = "myText" />
+        <span>{{myText | letterup }}</span>
         ` 
 })
 export class CoursesComponent {
@@ -60,6 +63,8 @@ export class CoursesComponent {
         price: 190.95,
         releaseDate: new Date(2016, 3, 1)
     };
+
+    myText: string;
     
     getTitle() {
         return this.title;
@@ -97,4 +102,6 @@ export class CoursesComponent {
         this.isFavorite = !this.isFavorite;
 
     }
+
+    
 }
