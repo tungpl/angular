@@ -13,6 +13,7 @@ import { AuthorsService } from './authors.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { SummaryPipe } from './summary.pipe';
 import { LetterupPile } from './letterup.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LetterupPile } from './letterup.pipe';
     CourseComponent,
     AuthorsComponent,
     SummaryPipe,
-    LetterupPile
+    LetterupPile,
+    FavoriteComponent
     
   ],
   imports: [
