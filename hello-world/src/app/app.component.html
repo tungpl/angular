@@ -1,4 +1,4 @@
 <h1>Angular</h1>
 <courses></courses>
 <authors></authors>
-<favorite [is-favorite] = "post.isFavorite" (change) = "onFavoriteChanged()"></favorite>
+<favorite [is-favorite] = "post.isFavorite" (change) = "onFavoriteChanged($event)"></favorite>
