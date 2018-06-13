@@ -3,8 +3,23 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: [
+    './app.component.css',
+    '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+  ]
 })
 export class AppComponent {
   title = 'app';
+  username = '';
+  display = false;
+  clickArr = [];
+
+  reset = () => {
+    this.username = '';
+  }
+
+  displayBlock = () => {
+    this.display = !this.display;
+    this.clickArr.push(new Date());
+  }
 }
