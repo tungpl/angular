@@ -19,4 +19,4 @@
     Boo is beautiful than I thought! She is really kute as well!
     Boo is beautiful than I thought! She is really kute as well!
 </div><br>
-<p *ngFor="let date of clickArr; let i = index" [ngStyle] = "{backgroundColor: i>=5 ? 'blue': ''}" [ngClass] = "{'white-text': i>=5}">{{date}}</p>
+<div *ngFor="let date of clickArr; let i = index" [ngStyle] = "{backgroundColor: i>=5 ? 'blue': 'transparent'}" [ngClass] = "{'white-text': i>=5}">{{date}}</div>
