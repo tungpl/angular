@@ -10,20 +10,7 @@ export class AppComponent implements OnInit {
   activeUsers = [];
   inactiveUsers = [];
 
-  constructor(private userService: UserService){
-    this.userService.userActivated.subscribe(
-      (id: number) => {
-        this.activeUsers.push(this.inactiveUsers[id]);
-        this.inactiveUsers.splice(id, 1);
-      }
-    );
-
-    this.userService.userDeactivated.subscribe(
-      (id: number) => {
-        this.inactiveUsers.push(this.inactiveUsers[id]);
-        this.activeUsers.splice(id, 1);
-      }
-    );
+  constructor(private userService: UserService){    
   }
 
   ngOnInit() {
